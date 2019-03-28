@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>正在热映</title>
+    <link rel="stylesheet" href="<%= css.reset %>" />
+    <link rel="stylesheet" href="<%= css.app %>" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      window.GLOBAL_DATA = <%- GLOBAL_DATA %>
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header class="header">
+          <span class="size22">TOP250电影</span> / <%= date %>
+        </header>
+        <section class="main">
+          <div class="movie-item" v-for="v in movie">
+            <a
+              class="movie-link"
+              target="_blank"
+              :href="v.alt"
+              :title="v.title"
+            >
+              <v-lazy-image
+                :title="v.title"
+                :src="'https://images.weserv.nl/?url=' + v.images.small"
+              />
+            </a>
+            <div class="movie-meta">
+              <p>{{ v.title }}</p>
+              <p>上映日期 {{ v.year }} 年</p>
+              <p>
+                导演
+                <template v-for="d in v.directors" :key="d.id">
+                  <a :href="d.alt" target="_blank">{{ d.name }}</a
+                  >&nbsp;
+                </template>
+              </p>
+              <p>
+                主演
+                <template v-for="c in v.casts" :key="c.id">
+                  <a :href="c.alt" target="_blank">{{ c.name }}</a
+                  >&nbsp;
+                </template>
+              </p>
+              <p>
+                豆瓣评分
+                <span class="scope">{{ v.rating.average | scope }}</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="<%= js.lazyImage %>"></script>
+    <script src="<%= js.app %>"></script>
+  </body>
+</html>
