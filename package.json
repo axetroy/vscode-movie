@@ -3,7 +3,7 @@
   "displayName": "电影集",
   "description": "在vscode中查看热映电影和评分前250名的电影",
   "icon": "resource/icon.png",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
     "vscode": "^1.31.0"
   },
