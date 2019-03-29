@@ -30,7 +30,7 @@ body {
 .main {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: flex-start;
   padding: 0 10px;
   min-width: 1200px;
 }
