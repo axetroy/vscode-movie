@@ -32,23 +32,29 @@
             </a>
             <div class="movie-meta">
               <p>{{ v.title }}</p>
-              <p>上映日期 {{ v.year }} 年</p>
+              <p>上映日期: {{ v.year }} 年</p>
               <p>
-                导演
+                类型:
+                <template v-for="d in v.genres">
+                  <span>{{ d }}</span>&nbsp;
+                </template>
+              </p>
+              <p>
+                导演:
                 <template v-for="d in v.directors" :key="d.id">
                   <a :href="d.alt" target="_blank">{{ d.name }}</a
                   >&nbsp;
                 </template>
               </p>
               <p>
-                主演
+                主演:
                 <template v-for="c in v.casts" :key="c.id">
                   <a :href="c.alt" target="_blank">{{ c.name }}</a
                   >&nbsp;
                 </template>
               </p>
               <p>
-                豆瓣评分
+                豆瓣评分:
                 <span class="scope">{{ v.rating.average | scope }}</span>
               </p>
             </div>

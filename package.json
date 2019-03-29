@@ -18,7 +18,8 @@
   "repository": "https://github.com/axetroy/vscode-movie",
   "activationEvents": [
     "onCommand:movie.online",
-    "onCommand:movie.top250"
+    "onCommand:movie.top250",
+    "onCommand:movie.comming"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -32,6 +33,11 @@
         "command": "movie.top250",
         "title": "TOP250电影",
         "category": "movie"
+      },
+      {
+        "command": "movie.comming",
+        "title": "即将上映",
+        "category": "movie"
       }
     ],
     "menus": {
@@ -42,6 +48,10 @@
         },
         {
           "command": "movie.top250",
+          "group": "movie"
+        },
+        {
+          "command": "movie.comming",
           "group": "movie"
         }
       ]

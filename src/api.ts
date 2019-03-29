@@ -61,6 +61,19 @@ export async function getTopMovie(
   return subjects;
 }
 
+export async function getUpcomingMovie(): Promise<any[]> {
+  const { data } = await axios
+    .get("https://api.douban.com/v2/movie/coming_soon", {
+      params: {
+        count: 100
+      },
+      headers: headers
+    })
+    .catch(errorHandler);
+
+  return data.subjects;
+}
+
 export async function getYourCity() {
   const { data } = await axios.get("http://locate.axetroy.xyz");
 
