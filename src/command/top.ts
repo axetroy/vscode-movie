@@ -15,7 +15,7 @@ export default async function(context: vscode.ExtensionContext) {
   statusBar.show();
   let movie: any[] = [];
   try {
-    await getTopMovie();
+    movie = await getTopMovie();
   } catch (err) {
     throw err;
   } finally {

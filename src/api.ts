@@ -1,13 +1,23 @@
 import axios from "axios";
 import { window } from "vscode";
 
+const headers = {
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+  "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,zh-HK;q=0.7",
+  "Cache-Control": "max-age=0",
+  "User-Agent":
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"
+};
+
 function errorHandler(err: any) {
   const { response } = err;
   const data = response.data;
   if (data && data.msg) {
     const msg = "请求过于频繁，请稍后重试.";
     window.showErrorMessage(msg);
-    return Promise.reject(msg);
+    console.dir(err);
+    return Promise.reject(err);
   }
   return Promise.reject(err);
 }
@@ -19,9 +29,7 @@ export async function getHotMovie(city: string): Promise<any[]> {
         city,
         count: 100
       },
-      headers: {
-        "Content-Type": "application/json"
-      }
+      headers: headers
     })
     .catch(errorHandler);
 
@@ -38,21 +46,19 @@ export async function getTopMovie(
         start: initStart,
         count: 100
       },
-      headers: {
-        "Content-Type": "application/json"
-      }
+      headers: headers
     })
     .catch(errorHandler);
 
-  const { start, total } = data;
-  const num = data.subjects.length;
+  const { start, total, subjects } = data;
+  const num = subjects.length;
 
   // 如果还有下一页
   if (start + num < total) {
-    return movie.concat(await getTopMovie(start + num, data.subjects));
+    return movie.concat(await getTopMovie(start + num, subjects));
   }
 
-  return data.subjects;
+  return subjects;
 }
 
 export async function getYourCity() {
