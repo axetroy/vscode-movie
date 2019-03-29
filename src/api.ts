@@ -62,11 +62,7 @@ export async function getTopMovie(
 }
 
 export async function getYourCity() {
-  const { data } = await axios.get("http://api.map.baidu.com/location/ip", {
-    params: {
-      ak: "lGcipWTYZyE4ZvnIlZIy2dF8LmVlZ6P5" // app key
-    }
-  });
+  const { data } = await axios.get("http://locate.axetroy.xyz");
 
   return data.content.address_detail.city.replace(/\市$/, "");
 }
