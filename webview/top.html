@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>正在热映</title>
+    <title>TOP250电影</title>
     <link rel="stylesheet" href="<%= css.reset %>" />
     <link rel="stylesheet" href="<%= css.app %>" />
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
       window.GLOBAL_DATA = <%- GLOBAL_DATA %>
     </script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <div class="container">
         <header class="header">
           <span class="size22">TOP250电影</span> / <%= date %>
@@ -57,7 +56,8 @@
         </section>
       </div>
     </div>
-    <script src="<%= js.lazyImage %>"></script>
+    <script src="<%= js.vue %>"></script>
+    <script src="<%= js.vueLazyImage %>"></script>
     <script src="<%= js.app %>"></script>
   </body>
 </html>

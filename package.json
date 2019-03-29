@@ -45,6 +45,15 @@
           "group": "movie"
         }
       ]
+    },
+    "configuration": {
+      "title": "电影集",
+      "properties": {
+        "movie.city": {
+          "type": "string",
+          "markdownDescription": "当前所在城市。例如`北京`、`深圳`, 不包含`市`。如果为空，则使用IP定位城市"
+        }
+      }
     }
   },
   "scripts": {

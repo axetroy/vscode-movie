@@ -7,13 +7,12 @@
     <title>正在热映</title>
     <link rel="stylesheet" href="<%= css.reset %>" />
     <link rel="stylesheet" href="<%= css.app %>" />
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
       window.GLOBAL_DATA = <%- GLOBAL_DATA %>
     </script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <div class="container">
         <header class="header">
           <span class="size22">正在热映 - <%- city %></span> / <%= date %>
@@ -57,7 +56,8 @@
         </section>
       </div>
     </div>
-    <script src="<%= js.lazyImage %>"></script>
+    <script src="<%= js.vue %>"></script>
+    <script src="<%= js.vueLazyImage %>"></script>
     <script src="<%= js.app %>"></script>
   </body>
 </html>

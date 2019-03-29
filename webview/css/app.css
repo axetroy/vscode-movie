@@ -16,6 +16,10 @@ body {
   font-family: var(-vscode-editor-font-family);
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .header {
   margin: 20px 10px;
 }
