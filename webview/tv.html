@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>正在热映的电影</title>
+    <title>最近热门电视剧 - <%= tag %></title>
     <link rel="stylesheet" href="<%= css.reset %>" />
     <link rel="stylesheet" href="<%= css.app %>" />
     <script>
@@ -15,47 +15,26 @@
     <div id="app" v-cloak>
       <div class="container">
         <header class="header">
-          <span class="size22">正在热映的电影 - <%- city %></span> / <%= date %>
+          <span class="size22">最近热门电视剧 - <%= tag %></span> / <%= date %>
         </header>
         <section class="main">
           <div class="movie-item" v-for="v in movie">
             <a
               class="movie-link"
               target="_blank"
-              :href="v.alt"
+              :href="v.url"
               :title="v.title"
             >
               <v-lazy-image
                 :title="v.title"
-                :src="'https://images.weserv.nl/?url=' + v.images.small"
+                :src="'https://images.weserv.nl/?url=' + v.cover"
               />
             </a>
             <div class="movie-meta">
               <p>{{ v.title }}</p>
-              <p>上映日期: {{ v.year }} 年</p>
-              <p>
-                类型:
-                <template v-for="d in v.genres">
-                  <span>{{ d }}</span>&nbsp;
-                </template>
-              </p>
-              <p>
-                导演:
-                <template v-for="d in v.directors" :key="d.id">
-                  <a :href="d.alt" target="_blank">{{ d.name }}</a
-                  >&nbsp;
-                </template>
-              </p>
-              <p>
-                主演:
-                <template v-for="c in v.casts" :key="c.id">
-                  <a :href="c.alt" target="_blank">{{ c.name }}</a
-                  >&nbsp;
-                </template>
-              </p>
               <p>
                 豆瓣评分:
-                <span class="scope">{{ v.rating.average | scope }}</span>
+                <span class="scope">{{ v.rate | scope }}</span>
               </p>
             </div>
           </div>

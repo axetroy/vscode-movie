@@ -1,0 +1,9 @@
+{
+  "ext.config.title": "Movies",
+  "ext.config.city": "Current city name. For example, `Beijing`. If it is empty, use IP to locate the city",
+  "command.online.title": "Recent Movie",
+  "command.top250.title": "Classic Movie",
+  "command.comming.title": "Upcoming Movie",
+  "command.tv.title": "Recent Tv",
+  "placeholder.select.tag": "Please select a tag for TV"
+}

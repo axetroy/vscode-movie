@@ -2,6 +2,7 @@ import axios from "axios";
 import { window } from "vscode";
 
 const headers = {
+  Referer: 'https://movie.douban.com/',
   Accept:
     "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
   "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,zh-HK;q=0.7",
@@ -72,6 +73,32 @@ export async function getUpcomingMovie(): Promise<any[]> {
     .catch(errorHandler);
 
   return data.subjects;
+}
+
+export async function getTv(tag: string): Promise<any[]> {
+  const { data } = await axios
+    .get("https://movie.douban.com/j/search_subjects", {
+      params: {
+        type: "tv",
+        tag,
+        page_limit: 100,
+        page_start: 0
+      },
+      headers: headers
+    })
+    .catch(errorHandler);
+
+  return data.subjects;
+}
+
+export async function getTvTag(): Promise<string[]> {
+  const { data } = await axios
+    .get("https://movie.douban.com/j/search_tags?type=tv", {
+      headers: headers
+    })
+    .catch(errorHandler);
+
+  return data.tags;
 }
 
 export async function getYourCity() {
