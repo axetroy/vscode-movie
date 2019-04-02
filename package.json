@@ -43,7 +43,7 @@
       {
         "command": "movie.tv",
         "title": "最近热剧",
-        "category": "movie_tv"
+        "category": "movie"
       }
     ],
     "menus": {
@@ -62,7 +62,7 @@
         },
         {
           "command": "movie.tv",
-          "group": "movie"
+          "group": "movie_tv"
         }
       ]
     },
@@ -88,11 +88,11 @@
   "devDependencies": {
     "@types/ejs": "^2.6.3",
     "@types/fs-extra": "^5.0.5",
-    "@types/mocha": "^2.2.42",
-    "@types/node": "^10.12.21",
-    "tslint": "^5.12.1",
-    "typescript": "^3.3.1",
-    "vscode": "^1.1.28"
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.0",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.1",
+    "vscode": "^1.1.33"
   },
   "dependencies": {
     "axios": "^0.18.0",
