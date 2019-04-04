@@ -29,7 +29,7 @@ export default async function(context: vscode.ExtensionContext) {
     vscode.ViewColumn.One,
     {
       enableScripts: true,
-      retainContextWhenHidden: false,
+      retainContextWhenHidden: true,
       localResourceRoots: [vscode.Uri.file(webviewDir)]
     }
   );
