@@ -1,5 +1,7 @@
 # vscode-movie
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/vscode-movie.svg)](https://greenkeeper.io/)
+
 一个 vscode 扩展.
 
 在 vscode 中查看热映电影和评分前 250 名的电影.
