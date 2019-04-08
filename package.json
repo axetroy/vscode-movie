@@ -87,15 +87,15 @@
     "publish": "npx vsce publish"
   },
   "devDependencies": {
-    "@types/ejs": "^2.6.3",
-    "@types/fs-extra": "^5.0.5",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^11.13.0",
-    "move-cli": "^1.2.1",
-    "rimraf": "^2.6.3",
-    "tslint": "^5.15.0",
-    "typescript": "^3.4.1",
-    "vscode": "^1.1.33"
+    "@types/ejs": "2.6.3",
+    "@types/fs-extra": "5.0.5",
+    "@types/mocha": "5.2.6",
+    "@types/node": "11.13.0",
+    "move-cli": "1.2.1",
+    "rimraf": "2.6.3",
+    "tslint": "5.15.0",
+    "typescript": "3.4.2",
+    "vscode": "1.1.33"
   },
   "dependencies": {
     "axios": "^0.18.0",
