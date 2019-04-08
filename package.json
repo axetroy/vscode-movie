@@ -37,12 +37,12 @@
       },
       {
         "command": "movie.comming",
-        "title": "即将上映",
+        "title": "%command.comming.title%",
         "category": "movie"
       },
       {
         "command": "movie.tv",
-        "title": "最近热剧",
+        "title": "%command.tv.title%",
         "category": "movie"
       }
     ],
