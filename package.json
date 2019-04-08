@@ -81,6 +81,7 @@
     "clean": "rimraf ./out",
     "compile": "npm run clean && tsc -p ./ && npx @zeit/ncc build src/index.ts -o ./dist -e vscode -m && npm run clean && move-cli ./dist ./out",
     "watch": "tsc -watch -p ./",
+    "lint": "tslint -p ./ -c tslint.json",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s -r 0",
