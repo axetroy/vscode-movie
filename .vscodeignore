@@ -10,3 +10,4 @@ vsc-extension-quickstart.md
 **/*.ts
 screenshot-*.png
 node_modules
+renovate.json
