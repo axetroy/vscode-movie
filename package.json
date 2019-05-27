@@ -3,7 +3,7 @@
   "displayName": "电影集",
   "description": "在 vscode 中查看电影/电视剧资讯。",
   "icon": "resource/icon.png",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "engines": {
     "vscode": "^1.31.0"
   },
