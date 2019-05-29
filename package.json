@@ -95,7 +95,7 @@
     "move-cli": "1.2.1",
     "rimraf": "2.6.3",
     "tslint": "5.16.0",
-    "typescript": "3.4.5",
+    "typescript": "3.5.1",
     "vscode": "1.1.34"
   },
   "dependencies": {
