@@ -6,25 +6,20 @@ import { getHotMovie, getYourCity } from "../api";
 import { getResourceTree } from "../util";
 
 export default async function(context: vscode.ExtensionContext) {
-  const statusBar = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Right,
-    100
-  );
-  statusBar.text = "正在加载影讯...";
-  statusBar.show();
   let city: string = "北京";
-  let movie: any[] = [];
-  try {
-    city = vscode.workspace.getConfiguration("movie").get("city") as string;
-    if (!city) {
-      city = await getYourCity();
+  const movie = await vscode.window.withProgress(
+    {
+      location: vscode.ProgressLocation.Notification,
+      title: "正在加载影讯"
+    },
+    async () => {
+      city = vscode.workspace.getConfiguration("movie").get("city") as string;
+      if (!city) {
+        city = await getYourCity();
+      }
+      return await getHotMovie(city);
     }
-    movie = await getHotMovie(city);
-  } catch (err) {
-    throw err;
-  } finally {
-    statusBar.dispose();
-  }
+  );
 
   const webviewDir = path.join(context.extensionPath, "webview");
 

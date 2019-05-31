@@ -28,44 +28,24 @@
       {
         "command": "movie.online",
         "title": "%command.online.title%",
-        "category": "movie"
+        "category": "Movie"
       },
       {
         "command": "movie.top250",
         "title": "%command.top250.title%",
-        "category": "movie"
+        "category": "Movie"
       },
       {
         "command": "movie.comming",
         "title": "%command.comming.title%",
-        "category": "movie"
+        "category": "Movie"
       },
       {
         "command": "movie.tv",
         "title": "%command.tv.title%",
-        "category": "movie"
+        "category": "Movie"
       }
     ],
-    "menus": {
-      "editor/context": [
-        {
-          "command": "movie.online",
-          "group": "movie"
-        },
-        {
-          "command": "movie.top250",
-          "group": "movie"
-        },
-        {
-          "command": "movie.comming",
-          "group": "movie"
-        },
-        {
-          "command": "movie.tv",
-          "group": "movie_tv"
-        }
-      ]
-    },
     "configuration": {
       "title": "%ext.config.title%",
       "properties": {

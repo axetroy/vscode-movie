@@ -19,7 +19,16 @@
 - [x] 即将上映的电影
 - [x] 本地最近热映电影
 - [x] TOP250 的高分电影
-- [x] 热门美剧
+- [x] 热门电视剧, 包括国产/美剧/英剧等
+
+## Commands
+
+| Command       | Description           |
+| ------------- | --------------------- |
+| Movie.online  | 正在热映的电影        |
+| Movie.comming | 即将上映的电影        |
+| Movie.top250  | 排名前 250 的高分电影 |
+| Movie.tv      | 热门电视剧            |
 
 ## Statement
 

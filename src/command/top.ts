@@ -6,20 +6,15 @@ import { getTopMovie } from "../api";
 import { getResourceTree } from "../util";
 
 export default async function(context: vscode.ExtensionContext) {
-  const statusBar = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Right,
-    100
+  const movie = await vscode.window.withProgress(
+    {
+      location: vscode.ProgressLocation.Notification,
+      title: "正在加载影讯"
+    },
+    async () => {
+      return await getTopMovie();
+    }
   );
-  statusBar.text = "正在加载影讯...";
-  statusBar.show();
-  let movie: any[] = [];
-  try {
-    movie = await getTopMovie();
-  } catch (err) {
-    throw err;
-  } finally {
-    statusBar.dispose();
-  }
 
   const webviewDir = path.join(context.extensionPath, "webview");
 
