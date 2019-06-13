@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/axetroy/vscode-movie?branch=master)](https://travis-ci.com/axetroy/vscode-movie)
-[![Version](https://vsmarketplacebadge.apphb.com/version/axetroy.vscode-movie)](https://marketplace.visualstudio.com/items?itemName=axetroy.vscode-movie)
-[![Downloads](https://vsmarketplacebadge.apphb.com/downloads/axetroy.vscode-movie)](https://marketplace.visualstudio.com/items?itemName=axetroy.vscode-movie)
+[![Build Status](https://travis-ci.com/axetroy/vscode-movie.svg?branch=master)](https://travis-ci.com/axetroy/vscode-movie)
+[![Version](https://vsmarketplacebadge.apphb.com/version/axetroy.vscode-movie.svg)](https://marketplace.visualstudio.com/items?itemName=axetroy.vscode-movie)
+[![Downloads](https://vsmarketplacebadge.apphb.com/downloads/axetroy.vscode-movie.svg)](https://marketplace.visualstudio.com/items?itemName=axetroy.vscode-movie)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
