@@ -1,3 +1,4 @@
+import * as vscode from "vscode";
 import axios, { AxiosError } from "axios";
 import { window } from "vscode";
 
@@ -11,10 +12,17 @@ const headers = {
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"
 };
 
+function getApiKey(): string {
+  const api_key = vscode.workspace
+    .getConfiguration("movie")
+    .get("douban.api_key") as string;
+  return api_key;
+}
+
 const http = axios.create({
   headers,
   params: {
-    apikey: "0df993c66c0c636e29ecbb5344252a4a"
+    apikey: getApiKey()
   }
 });
 
@@ -36,7 +44,8 @@ export async function getHotMovie(city: string): Promise<any[]> {
     .get("https://api.douban.com/v2/movie/in_theaters", {
       params: {
         city,
-        count: 100
+        count: 100,
+        apikey: getApiKey()
       }
     })
     .catch(errorHandler);
@@ -52,7 +61,8 @@ export async function getTopMovie(
     .get("https://api.douban.com/v2/movie/top250", {
       params: {
         start: initStart,
-        count: 100
+        count: 100,
+        apikey: getApiKey()
       }
     })
     .catch(errorHandler);
@@ -72,7 +82,8 @@ export async function getUpcomingMovie(): Promise<any[]> {
   const { data } = await http
     .get("https://api.douban.com/v2/movie/coming_soon", {
       params: {
-        count: 100
+        count: 100,
+        apikey: getApiKey()
       }
     })
     .catch(errorHandler);
@@ -99,7 +110,8 @@ export async function getTvTag(): Promise<string[]> {
   const { data } = await http
     .get("https://movie.douban.com/j/search_tags", {
       params: {
-        type: "tv"
+        type: "tv",
+        apikey: getApiKey()
       }
     })
     .catch(errorHandler);

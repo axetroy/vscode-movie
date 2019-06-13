@@ -1,6 +1,7 @@
 {
   "ext.config.title": "Movies",
   "ext.config.city": "Current city name. For example, `Beijing`. If it is empty, use IP to locate the city",
+  "ext.config.douban.api_key": "Douban Web `API key`",
   "command.online.title": "Recent Movie",
   "command.top250.title": "Classic Movie",
   "command.comming.title": "Upcoming Movie",

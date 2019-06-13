@@ -1,6 +1,7 @@
 {
   "ext.config.title": "電影集",
   "ext.config.city": "當前所在城市。例如`北京`、`深圳`, 不包含`市`。如果為空，則使用IP定位城市",
+  "ext.config.douban.api_key": "豆瓣網的 `API key`",
   "command.online.title": "熱映電影",
   "command.top250.title": "高分電影",
   "command.comming.title": "即將上映",
