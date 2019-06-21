@@ -79,7 +79,7 @@
     "@types/node": "11.13.14",
     "move-cli": "1.2.1",
     "rimraf": "2.6.3",
-    "tslint": "5.17.0",
+    "tslint": "5.18.0",
     "typescript": "3.5.2",
     "vscode": "1.1.34"
   },
