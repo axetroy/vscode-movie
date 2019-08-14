@@ -78,7 +78,7 @@
     "@types/mocha": "5.2.7",
     "@types/node": "11.13.19",
     "move-cli": "1.2.1",
-    "rimraf": "2.7.0",
+    "rimraf": "3.0.0",
     "tslint": "5.18.0",
     "typescript": "3.5.3",
     "vscode": "1.1.36"
