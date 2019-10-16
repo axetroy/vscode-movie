@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "@types/ejs": "2.6.3",
-    "@types/fs-extra": "8.0.0",
+    "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
     "@types/node": "11.13.22",
     "move-cli": "1.2.1",
