@@ -75,7 +75,7 @@
   "devDependencies": {
     "@types/ejs": "3.0.0",
     "@types/fs-extra": "8.0.1",
-    "@types/mocha": "5.2.7",
+    "@types/mocha": "7.0.1",
     "@types/node": "11.15.6",
     "move-cli": "1.2.1",
     "rimraf": "3.0.2",
