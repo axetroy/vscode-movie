@@ -73,7 +73,7 @@
     "publish": "npx vsce publish"
   },
   "devDependencies": {
-    "@types/ejs": "3.0.4",
+    "@types/ejs": "3.0.5",
     "@types/fs-extra": "8.1.1",
     "@types/mocha": "8.0.3",
     "@types/node": "11.15.32",
