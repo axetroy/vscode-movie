@@ -76,7 +76,7 @@
     "@types/ejs": "3.0.5",
     "@types/fs-extra": "8.1.1",
     "@types/mocha": "8.0.4",
-    "@types/node": "11.15.36",
+    "@types/node": "11.15.37",
     "move-cli": "1.2.1",
     "rimraf": "3.0.2",
     "tslint": "6.1.3",
